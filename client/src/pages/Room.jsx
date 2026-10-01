@@ -204,8 +204,8 @@ export default function Room({ roomId, onNavigateHome }) {
         onOpenDeckConfig={() => setIsDeckConfigOpen(true)}
       />
 
-      {/* Área de trabajo central */}
-      <main className="flex-1 flex flex-col items-center justify-start max-w-7xl w-full mx-auto px-2 sm:px-4 pt-4 sm:pt-6">
+      {/* Área de trabajo central (centrada vertical y horizontalmente) */}
+      <main className="flex-1 flex flex-col items-center justify-center max-w-7xl w-full mx-auto px-2 sm:px-4 py-2 sm:py-4 my-auto">
 
         {/* Editor o visualizador de la tarea / historia actual */}
         {/* <TaskEditor

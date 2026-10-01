@@ -74,3 +74,8 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(59, 130, 246, 0.8);
 }
+
+/* Área segura inferior para barras de gestos móviles (iPhone / Android) */
+.safe-bottom {
+  padding-bottom: max(0.6rem, env(safe-area-inset-bottom));
+}
