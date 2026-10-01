@@ -27,7 +27,7 @@ export default function Home({ onNavigateToRoom }) {
           setLanInfo(data);
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   // Validación común del nombre
@@ -87,7 +87,7 @@ export default function Home({ onNavigateToRoom }) {
 
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between relative overflow-hidden">
-      
+
       {/* Fondo con resplandores decorativos */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-600/15 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-[300px] h-[300px] bg-cyan-600/10 rounded-full blur-[100px] pointer-events-none" />
@@ -104,12 +104,12 @@ export default function Home({ onNavigateToRoom }) {
         </div>
 
         <div className="flex items-center gap-2">
-          {lanInfo?.lanIp && (
+          {/* {lanInfo?.lanIp && (
             <div className="hidden sm:flex items-center gap-1.5 text-xs text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-3 py-1.5 rounded-full font-mono">
               <Wifi className="w-3.5 h-3.5" />
               <span>Red LAN: {lanInfo.lanIp}:{lanInfo.clientPort || 5173}</span>
             </div>
-          )}
+          )} */}
 
           <div className="flex items-center gap-2 text-xs text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1.5 rounded-full">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -120,7 +120,7 @@ export default function Home({ onNavigateToRoom }) {
 
       {/* Contenido Principal */}
       <main className="max-w-xl w-full mx-auto px-4 py-8 z-10 flex flex-col items-center text-center">
-        
+
         {/* Título y subtítulo */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/70 border border-blue-800/60 text-cyan-400 text-xs font-semibold mb-6 shadow-sm">
           <Sparkles className="w-3.5 h-3.5" />
@@ -140,7 +140,7 @@ export default function Home({ onNavigateToRoom }) {
 
         {/* Tarjeta de Inicio */}
         <div className="w-full bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-blue-950/50 backdrop-blur-xl">
-          
+
           {error && (
             <div className="mb-5 p-3.5 bg-rose-950/60 border border-rose-800/80 rounded-2xl text-rose-300 text-xs text-left animate-in fade-in">
               {error}
@@ -197,11 +197,10 @@ export default function Home({ onNavigateToRoom }) {
                       setSelectedDeckKey(tmpl.id);
                       setShowDeckSelector(false);
                     }}
-                    className={`p-2.5 rounded-xl border text-left text-xs transition-colors flex items-center justify-between ${
-                      selectedDeckKey === tmpl.id
-                        ? 'bg-blue-600/20 border-cyan-400 text-white'
-                        : 'bg-slate-900/60 border-slate-800 text-slate-300 hover:bg-slate-800'
-                    }`}
+                    className={`p-2.5 rounded-xl border text-left text-xs transition-colors flex items-center justify-between ${selectedDeckKey === tmpl.id
+                      ? 'bg-blue-600/20 border-cyan-400 text-white'
+                      : 'bg-slate-900/60 border-slate-800 text-slate-300 hover:bg-slate-800'
+                      }`}
                   >
                     <div>
                       <div className="font-semibold text-white">{tmpl.name}</div>
@@ -223,7 +222,7 @@ export default function Home({ onNavigateToRoom }) {
 
           {/* Botones de acción */}
           <div className="flex flex-col gap-3">
-            
+
             {/* Opción 1: Crear Sala */}
             <button
               onClick={handleCreateRoom}
@@ -272,7 +271,7 @@ export default function Home({ onNavigateToRoom }) {
 
         {/* Pilares / Ventajas */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full mt-10 text-left">
-          
+
           <div className="p-4 rounded-2xl bg-slate-900/50 border border-slate-800/80 flex items-start gap-3">
             <div className="p-2 rounded-xl bg-blue-500/10 text-blue-400 shrink-0">
               <Zap className="w-4 h-4" />
@@ -314,7 +313,7 @@ export default function Home({ onNavigateToRoom }) {
       </main>
 
       {/* Footer con información de red LAN */}
-      <footer className="w-full py-4 text-center text-xs text-slate-500 border-t border-slate-900 z-10 px-4">
+      {/* <footer className="w-full py-4 text-center text-xs text-slate-500 border-t border-slate-900 z-10 px-4">
         {lanInfo?.lanIp ? (
           <span className="flex items-center justify-center gap-1.5">
             <Wifi className="w-3.5 h-3.5 text-emerald-400" />
@@ -323,7 +322,7 @@ export default function Home({ onNavigateToRoom }) {
         ) : (
           <span>Planning Poker colaborativo para equipos ágiles</span>
         )}
-      </footer>
+      </footer> */}
 
     </div>
   );
